@@ -1,10 +1,7 @@
 
 //CORS configuration 
 
-corsOptions = {
-    credentials: true,
-    origin: true
-}
+corsOptions = {}
 
 module.exports = {
     corsOptions
