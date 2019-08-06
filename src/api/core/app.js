@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
-});
+})
 
 //establish connection with a local db defined in config with a string
 //you can set a new string to a cluster and make your dbs remotely stored

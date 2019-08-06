@@ -21,8 +21,18 @@ function getByIdProduct({ id }) {
   return productModel.findById(mongodb.ObjectId(id));
 }
 
-function findLikeProduct({ criteria }) {
-  return productModel.find(actions.v1.setObjectValues(criteria));
+function findLikeProduct({ criteria }, field) {
+  return productModel
+    .find({
+      $or: [
+        {
+          name: {
+            $regex: `^${criteria}`
+          }
+        }
+      ]
+    })
+    .select({ _id: 0 });
 }
 
 function insertProduct(product) {

@@ -75,9 +75,9 @@ function searchProduct(req, res, next) {
   dal.v1
     .findLikeProduct(req.params)
     .then(products => {
-      res.send(200).json(products);
+      res.status(200).json(products);
     })
     .catch(err => {
-      res.send(500).json(err);
+      res.status(500).json(err);
     });
 }
