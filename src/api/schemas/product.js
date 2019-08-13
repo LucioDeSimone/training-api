@@ -9,7 +9,10 @@ const productSchema = new Schema({
     category: String
   },
   stock: Number,
-  price: Number,
+  price: Number
 });
 
+productSchema.index({
+  name: "text",
+});
 module.exports = productSchema;
