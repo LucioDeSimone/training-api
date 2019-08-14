@@ -50,6 +50,8 @@ const productRouter = require("../resources/product/routes");
 
 app.use(`${config.basePath}/product`, productRouter);
 
+app.use(config.jwtCheck);
+
 //invalid route / 404 httpcode handdler
 
 app.use("/api/v1", (req, res) => {
