@@ -10,7 +10,7 @@
 const basePath = process.env.API_BASE_PATH || "/api/v1";
 const env = (process.env.APP_ENV || "prd").toLowerCase();
 const hostname = process.env.API_HOST || "localhost";
-const port = process.env.API_PORT || process.env.PORT || 3000;
+const port = process.env.API_PORT || process.env.PORT || 3001;
 const mongoDB = process.env.MONGODB_URI || "mongodb://localhost:27017/client";
 const connectionOpt = {
   useNewUrlParser: true
