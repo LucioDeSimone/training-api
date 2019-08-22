@@ -16,6 +16,5 @@ module.exports = userSchema = new Schema({
     amount: Number,
     owes: Number,
     overdraft: Number
-  },
-
+  }
 });

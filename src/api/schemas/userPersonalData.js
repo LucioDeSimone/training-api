@@ -8,5 +8,6 @@ module.exports = userPersonalDataSchema = new Schema({
   },
   email: String,
   nin: String, //national identification number
-  phone: string
+  phone: String,  
+  adress: String
 });

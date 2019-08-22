@@ -15,7 +15,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//to log requests and status
+//to log requests method, uri, status and time of return
 
 app.use(logger("dev"));
 
@@ -23,14 +23,6 @@ app.use(logger("dev"));
 
 app.use(cors(utils.corsOptions));
 
-//temporary headers config
-
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
 
 //establish connection with a local db defined in config with a string
 //you can set a new string to a cluster and make your dbs remotely stored
